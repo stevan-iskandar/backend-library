@@ -33,9 +33,12 @@ class AuthorSeeder extends Seeder
 
         foreach ($data as $item)
             Author::firstOrCreate([
-                Author::ATTR_CHAR_CODE        => $item[Author::ATTR_CHAR_CODE],
+                Author::ATTR_CHAR_CODE  => $item[Author::ATTR_CHAR_CODE],
             ], [
-                Author::ATTR_CHAR_NAME => $item[Author::ATTR_CHAR_NAME],
+                Author::ATTR_CHAR_NAME  => $item[Author::ATTR_CHAR_NAME],
+                Author::ATTR_INT_GENDER => $item[Author::ATTR_INT_GENDER],
+                Author::ATTR_CHAR_PHONE => $item[Author::ATTR_CHAR_PHONE],
+                Author::ATTR_CHAR_EMAIL => $item[Author::ATTR_CHAR_EMAIL],
             ]);
     }
 }

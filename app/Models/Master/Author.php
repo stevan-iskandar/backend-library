@@ -37,14 +37,14 @@ class Author extends BaseModel
      *
      * @var bool
      */
-    protected $incrementing = true;
+    public $incrementing = true;
 
     /**
      * Indicates if the model should be timestamped.
      *
      * @var bool
      */
-    protected $timestamps = true;
+    public $timestamps = true;
 
     protected $fillable = [
         self::ATTR_CHAR_CODE,
