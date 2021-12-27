@@ -6,17 +6,14 @@ use App\Models\BaseModel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Author extends BaseModel
+class Category extends BaseModel
 {
     use HasFactory, SoftDeletes;
 
-    const ATTR_TABLE            = 'authors';
+    const ATTR_TABLE            = 'category';
 
-    const ATTR_CHAR_CODE        = 'code';
     const ATTR_CHAR_NAME        = 'name';
-    const ATTR_INT_GENDER       = 'gender';
-    const ATTR_CHAR_PHONE       = 'phone';
-    const ATTR_CHAR_EMAIL       = 'email';
+    const ATTR_TEXT_DESCRIPTION = 'description';
 
     /**
      * The table associated with the model.
@@ -47,11 +44,8 @@ class Author extends BaseModel
     protected $timestamps = true;
 
     protected $fillable = [
-        self::ATTR_CHAR_CODE,
         self::ATTR_CHAR_NAME,
-        self::ATTR_INT_GENDER,
-        self::ATTR_CHAR_PHONE,
-        self::ATTR_CHAR_EMAIL,
+        self::ATTR_TEXT_DESCRIPTION,
 
         self::ATTR_CHAR_CREATED_BY,
         self::ATTR_CHAR_UPDATED_BY,
